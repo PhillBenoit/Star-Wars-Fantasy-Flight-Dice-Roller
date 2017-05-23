@@ -1,0 +1,11 @@
+c:\users\user\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\bin\Debug\Visual Basic - Dice Roller.exe.config
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\bin\Debug\Visual Basic - Dice Roller.exe
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\bin\Debug\Visual Basic - Dice Roller.pdb
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\bin\Debug\Visual Basic - Dice Roller.xml
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual Basic - Dice Roller.vbprojResolveAssemblyReference.cache
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual_Basic___Dice_Roller.frmDice.resources
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual_Basic___Dice_Roller.Resources.resources
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual Basic - Dice Roller.vbproj.GenerateResource.Cache
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual Basic - Dice Roller.exe
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual Basic - Dice Roller.xml
+C:\Users\User\documents\visual studio 2015\Projects\Visual Basic - Dice Roller\Visual Basic - Dice Roller\obj\Debug\Visual Basic - Dice Roller.pdb
