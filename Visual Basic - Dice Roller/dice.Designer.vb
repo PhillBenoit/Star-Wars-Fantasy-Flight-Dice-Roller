@@ -29,12 +29,12 @@ Partial Class frmDice
         Me.cmdClear = New System.Windows.Forms.Button()
         Me.cmdExit = New System.Windows.Forms.Button()
         Me.gbxPositive = New System.Windows.Forms.GroupBox()
-        Me.nudSuccess = New System.Windows.Forms.NumericUpDown()
-        Me.lblSuccess = New System.Windows.Forms.Label()
-        Me.lblAdvantage = New System.Windows.Forms.Label()
-        Me.nudAdvantage = New System.Windows.Forms.NumericUpDown()
         Me.lblTriumph = New System.Windows.Forms.Label()
         Me.nudTriumph = New System.Windows.Forms.NumericUpDown()
+        Me.lblAdvantage = New System.Windows.Forms.Label()
+        Me.nudAdvantage = New System.Windows.Forms.NumericUpDown()
+        Me.lblSuccess = New System.Windows.Forms.Label()
+        Me.nudSuccess = New System.Windows.Forms.NumericUpDown()
         Me.gbxNegative = New System.Windows.Forms.GroupBox()
         Me.lblDispair = New System.Windows.Forms.Label()
         Me.nudDispair = New System.Windows.Forms.NumericUpDown()
@@ -69,11 +69,20 @@ Partial Class frmDice
         Me.lstForce = New System.Windows.Forms.ListBox()
         Me.lblForce = New System.Windows.Forms.Label()
         Me.nudForce = New System.Windows.Forms.NumericUpDown()
+        Me.rgpTotal = New System.Windows.Forms.GroupBox()
+        Me.lblTotalT = New System.Windows.Forms.Label()
+        Me.nudTotalT = New System.Windows.Forms.NumericUpDown()
+        Me.lblTotalAT = New System.Windows.Forms.Label()
+        Me.nudTotalAT = New System.Windows.Forms.NumericUpDown()
+        Me.lblTotalSF = New System.Windows.Forms.Label()
+        Me.nudTotalSF = New System.Windows.Forms.NumericUpDown()
+        Me.lblTotalD = New System.Windows.Forms.Label()
+        Me.nudTotalD = New System.Windows.Forms.NumericUpDown()
         CType(Me.nudBoost, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxPositive.SuspendLayout()
-        CType(Me.nudSuccess, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.nudAdvantage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudTriumph, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudAdvantage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudSuccess, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbxNegative.SuspendLayout()
         CType(Me.nudDispair, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudThreat, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +97,11 @@ Partial Class frmDice
         CType(Me.nudProficiency, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudChallenge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.nudForce, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.rgpTotal.SuspendLayout()
+        CType(Me.nudTotalT, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudTotalAT, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudTotalSF, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudTotalD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'nudBoost
@@ -104,6 +118,7 @@ Partial Class frmDice
         'lblBoost
         '
         Me.lblBoost.AutoSize = True
+        Me.lblBoost.BackColor = System.Drawing.Color.PowderBlue
         Me.lblBoost.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBoost.Location = New System.Drawing.Point(118, 35)
         Me.lblBoost.Name = "lblBoost"
@@ -167,26 +182,26 @@ Partial Class frmDice
         Me.gbxPositive.TabStop = False
         Me.gbxPositive.Text = "Positive Results"
         '
-        'nudSuccess
+        'lblTriumph
         '
-        Me.nudSuccess.Enabled = False
-        Me.nudSuccess.Location = New System.Drawing.Point(193, 38)
-        Me.nudSuccess.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
-        Me.nudSuccess.Name = "nudSuccess"
-        Me.nudSuccess.ReadOnly = True
-        Me.nudSuccess.Size = New System.Drawing.Size(78, 39)
-        Me.nudSuccess.TabIndex = 0
-        Me.nudSuccess.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.lblTriumph.AutoSize = True
+        Me.lblTriumph.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTriumph.Location = New System.Drawing.Point(13, 132)
+        Me.lblTriumph.Name = "lblTriumph"
+        Me.lblTriumph.Size = New System.Drawing.Size(119, 32)
+        Me.lblTriumph.TabIndex = 12
+        Me.lblTriumph.Text = "Triumph"
         '
-        'lblSuccess
+        'nudTriumph
         '
-        Me.lblSuccess.AutoSize = True
-        Me.lblSuccess.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSuccess.Location = New System.Drawing.Point(13, 40)
-        Me.lblSuccess.Name = "lblSuccess"
-        Me.lblSuccess.Size = New System.Drawing.Size(122, 32)
-        Me.lblSuccess.TabIndex = 8
-        Me.lblSuccess.Text = "Success"
+        Me.nudTriumph.Enabled = False
+        Me.nudTriumph.Location = New System.Drawing.Point(193, 130)
+        Me.nudTriumph.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudTriumph.Name = "nudTriumph"
+        Me.nudTriumph.ReadOnly = True
+        Me.nudTriumph.Size = New System.Drawing.Size(78, 39)
+        Me.nudTriumph.TabIndex = 11
+        Me.nudTriumph.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'lblAdvantage
         '
@@ -209,26 +224,26 @@ Partial Class frmDice
         Me.nudAdvantage.TabIndex = 9
         Me.nudAdvantage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
-        'lblTriumph
+        'lblSuccess
         '
-        Me.lblTriumph.AutoSize = True
-        Me.lblTriumph.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTriumph.Location = New System.Drawing.Point(13, 132)
-        Me.lblTriumph.Name = "lblTriumph"
-        Me.lblTriumph.Size = New System.Drawing.Size(119, 32)
-        Me.lblTriumph.TabIndex = 12
-        Me.lblTriumph.Text = "Triumph"
+        Me.lblSuccess.AutoSize = True
+        Me.lblSuccess.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSuccess.Location = New System.Drawing.Point(13, 40)
+        Me.lblSuccess.Name = "lblSuccess"
+        Me.lblSuccess.Size = New System.Drawing.Size(122, 32)
+        Me.lblSuccess.TabIndex = 8
+        Me.lblSuccess.Text = "Success"
         '
-        'nudTriumph
+        'nudSuccess
         '
-        Me.nudTriumph.Enabled = False
-        Me.nudTriumph.Location = New System.Drawing.Point(193, 130)
-        Me.nudTriumph.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
-        Me.nudTriumph.Name = "nudTriumph"
-        Me.nudTriumph.ReadOnly = True
-        Me.nudTriumph.Size = New System.Drawing.Size(78, 39)
-        Me.nudTriumph.TabIndex = 11
-        Me.nudTriumph.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.nudSuccess.Enabled = False
+        Me.nudSuccess.Location = New System.Drawing.Point(193, 38)
+        Me.nudSuccess.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudSuccess.Name = "nudSuccess"
+        Me.nudSuccess.ReadOnly = True
+        Me.nudSuccess.Size = New System.Drawing.Size(78, 39)
+        Me.nudSuccess.TabIndex = 0
+        Me.nudSuccess.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'gbxNegative
         '
@@ -378,7 +393,9 @@ Partial Class frmDice
         'lblSetback
         '
         Me.lblSetback.AutoSize = True
+        Me.lblSetback.BackColor = System.Drawing.Color.Black
         Me.lblSetback.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSetback.ForeColor = System.Drawing.Color.White
         Me.lblSetback.Location = New System.Drawing.Point(355, 35)
         Me.lblSetback.Name = "lblSetback"
         Me.lblSetback.Size = New System.Drawing.Size(118, 32)
@@ -440,6 +457,7 @@ Partial Class frmDice
         'lblAbility
         '
         Me.lblAbility.AutoSize = True
+        Me.lblAbility.BackColor = System.Drawing.Color.Green
         Me.lblAbility.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAbility.Location = New System.Drawing.Point(118, 218)
         Me.lblAbility.Name = "lblAbility"
@@ -471,7 +489,9 @@ Partial Class frmDice
         'lblDifficulty
         '
         Me.lblDifficulty.AutoSize = True
+        Me.lblDifficulty.BackColor = System.Drawing.Color.Indigo
         Me.lblDifficulty.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDifficulty.ForeColor = System.Drawing.Color.White
         Me.lblDifficulty.Location = New System.Drawing.Point(355, 218)
         Me.lblDifficulty.Name = "lblDifficulty"
         Me.lblDifficulty.Size = New System.Drawing.Size(124, 32)
@@ -502,6 +522,7 @@ Partial Class frmDice
         'lblProficiency
         '
         Me.lblProficiency.AutoSize = True
+        Me.lblProficiency.BackColor = System.Drawing.Color.Yellow
         Me.lblProficiency.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblProficiency.Location = New System.Drawing.Point(118, 400)
         Me.lblProficiency.Name = "lblProficiency"
@@ -533,7 +554,9 @@ Partial Class frmDice
         'lblChallenge
         '
         Me.lblChallenge.AutoSize = True
+        Me.lblChallenge.BackColor = System.Drawing.Color.Red
         Me.lblChallenge.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblChallenge.ForeColor = System.Drawing.Color.White
         Me.lblChallenge.Location = New System.Drawing.Point(355, 400)
         Me.lblChallenge.Name = "lblChallenge"
         Me.lblChallenge.Size = New System.Drawing.Size(145, 32)
@@ -574,6 +597,7 @@ Partial Class frmDice
         'lblForce
         '
         Me.lblForce.AutoSize = True
+        Me.lblForce.BackColor = System.Drawing.Color.White
         Me.lblForce.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblForce.Location = New System.Drawing.Point(583, 400)
         Me.lblForce.Name = "lblForce"
@@ -592,11 +616,112 @@ Partial Class frmDice
         Me.nudForce.Tag = "12"
         Me.nudForce.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'rgpTotal
+        '
+        Me.rgpTotal.Controls.Add(Me.lblTotalD)
+        Me.rgpTotal.Controls.Add(Me.nudTotalD)
+        Me.rgpTotal.Controls.Add(Me.lblTotalT)
+        Me.rgpTotal.Controls.Add(Me.nudTotalT)
+        Me.rgpTotal.Controls.Add(Me.lblTotalAT)
+        Me.rgpTotal.Controls.Add(Me.nudTotalAT)
+        Me.rgpTotal.Controls.Add(Me.lblTotalSF)
+        Me.rgpTotal.Controls.Add(Me.nudTotalSF)
+        Me.rgpTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rgpTotal.Location = New System.Drawing.Point(1003, 225)
+        Me.rgpTotal.Name = "rgpTotal"
+        Me.rgpTotal.Size = New System.Drawing.Size(277, 232)
+        Me.rgpTotal.TabIndex = 14
+        Me.rgpTotal.TabStop = False
+        Me.rgpTotal.Text = "Total Results"
+        '
+        'lblTotalT
+        '
+        Me.lblTotalT.AutoSize = True
+        Me.lblTotalT.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalT.Location = New System.Drawing.Point(13, 132)
+        Me.lblTotalT.Name = "lblTotalT"
+        Me.lblTotalT.Size = New System.Drawing.Size(119, 32)
+        Me.lblTotalT.TabIndex = 12
+        Me.lblTotalT.Text = "Triumph"
+        '
+        'nudTotalT
+        '
+        Me.nudTotalT.Enabled = False
+        Me.nudTotalT.Location = New System.Drawing.Point(193, 130)
+        Me.nudTotalT.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudTotalT.Name = "nudTotalT"
+        Me.nudTotalT.ReadOnly = True
+        Me.nudTotalT.Size = New System.Drawing.Size(78, 39)
+        Me.nudTotalT.TabIndex = 11
+        Me.nudTotalT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblTotalAT
+        '
+        Me.lblTotalAT.AutoSize = True
+        Me.lblTotalAT.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalAT.Location = New System.Drawing.Point(13, 85)
+        Me.lblTotalAT.Name = "lblTotalAT"
+        Me.lblTotalAT.Size = New System.Drawing.Size(0, 32)
+        Me.lblTotalAT.TabIndex = 10
+        '
+        'nudTotalAT
+        '
+        Me.nudTotalAT.Enabled = False
+        Me.nudTotalAT.Location = New System.Drawing.Point(193, 83)
+        Me.nudTotalAT.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudTotalAT.Name = "nudTotalAT"
+        Me.nudTotalAT.ReadOnly = True
+        Me.nudTotalAT.Size = New System.Drawing.Size(78, 39)
+        Me.nudTotalAT.TabIndex = 9
+        Me.nudTotalAT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblTotalSF
+        '
+        Me.lblTotalSF.AutoSize = True
+        Me.lblTotalSF.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalSF.Location = New System.Drawing.Point(13, 40)
+        Me.lblTotalSF.Name = "lblTotalSF"
+        Me.lblTotalSF.Size = New System.Drawing.Size(0, 32)
+        Me.lblTotalSF.TabIndex = 8
+        '
+        'nudTotalSF
+        '
+        Me.nudTotalSF.Enabled = False
+        Me.nudTotalSF.Location = New System.Drawing.Point(193, 38)
+        Me.nudTotalSF.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudTotalSF.Name = "nudTotalSF"
+        Me.nudTotalSF.ReadOnly = True
+        Me.nudTotalSF.Size = New System.Drawing.Size(78, 39)
+        Me.nudTotalSF.TabIndex = 0
+        Me.nudTotalSF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblTotalD
+        '
+        Me.lblTotalD.AutoSize = True
+        Me.lblTotalD.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalD.Location = New System.Drawing.Point(13, 180)
+        Me.lblTotalD.Name = "lblTotalD"
+        Me.lblTotalD.Size = New System.Drawing.Size(104, 32)
+        Me.lblTotalD.TabIndex = 14
+        Me.lblTotalD.Text = "Dispair"
+        '
+        'nudTotalD
+        '
+        Me.nudTotalD.Enabled = False
+        Me.nudTotalD.Location = New System.Drawing.Point(193, 178)
+        Me.nudTotalD.Maximum = New Decimal(New Integer() {999, 0, 0, 0})
+        Me.nudTotalD.Name = "nudTotalD"
+        Me.nudTotalD.ReadOnly = True
+        Me.nudTotalD.Size = New System.Drawing.Size(78, 39)
+        Me.nudTotalD.TabIndex = 13
+        Me.nudTotalD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'frmDice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1009, 637)
+        Me.ClientSize = New System.Drawing.Size(1291, 637)
+        Me.Controls.Add(Me.rgpTotal)
         Me.Controls.Add(Me.lstForce)
         Me.Controls.Add(Me.lblForce)
         Me.Controls.Add(Me.nudForce)
@@ -633,9 +758,9 @@ Partial Class frmDice
         CType(Me.nudBoost, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbxPositive.ResumeLayout(False)
         Me.gbxPositive.PerformLayout()
-        CType(Me.nudSuccess, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.nudAdvantage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudTriumph, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudAdvantage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudSuccess, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbxNegative.ResumeLayout(False)
         Me.gbxNegative.PerformLayout()
         CType(Me.nudDispair, System.ComponentModel.ISupportInitialize).EndInit()
@@ -652,6 +777,12 @@ Partial Class frmDice
         CType(Me.nudProficiency, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudChallenge, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.nudForce, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.rgpTotal.ResumeLayout(False)
+        Me.rgpTotal.PerformLayout()
+        CType(Me.nudTotalT, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudTotalAT, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudTotalSF, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudTotalD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -704,4 +835,13 @@ Partial Class frmDice
     Friend WithEvents lstForce As ListBox
     Friend WithEvents lblForce As Label
     Friend WithEvents nudForce As NumericUpDown
+    Friend WithEvents rgpTotal As GroupBox
+    Friend WithEvents lblTotalD As Label
+    Friend WithEvents nudTotalD As NumericUpDown
+    Friend WithEvents lblTotalT As Label
+    Friend WithEvents nudTotalT As NumericUpDown
+    Friend WithEvents lblTotalAT As Label
+    Friend WithEvents nudTotalAT As NumericUpDown
+    Friend WithEvents lblTotalSF As Label
+    Friend WithEvents nudTotalSF As NumericUpDown
 End Class

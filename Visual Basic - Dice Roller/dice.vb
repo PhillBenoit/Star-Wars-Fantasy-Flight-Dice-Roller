@@ -185,6 +185,18 @@
             End Select
         Next
 
+        Dim success As Integer = nudSuccess.Value - nudFailure.Value + nudTriumph.Value - nudDispair.Value
+        If success >= 0 Then lblTotalSF.Text = "Success" Else lblTotalSF.Text = "Failure"
+        nudTotalSF.Value = Math.Abs(success)
+
+        Dim advantage As Integer = nudAdvantage.Value - nudThreat.Value
+        If advantage >= 0 Then lblTotalAT.Text = "Advantage" Else lblTotalAT.Text = "Threat"
+        nudTotalAT.Value = Math.Abs(advantage)
+
+        nudTotalT.Value = nudTriumph.Value
+
+        nudTotalD.Value = nudDispair.Value
+
     End Sub
 
     Private Sub cmdExit_Click(sender As Object, e As EventArgs) Handles cmdExit.Click
@@ -204,6 +216,14 @@
         nudDispair.Value = 0
         nudLight.Value = 0
         nudDark.Value = 0
+
+        lblTotalAT.Text = ""
+        lblTotalSF.Text = ""
+
+        nudTotalAT.Value = 0
+        nudTotalSF.Value = 0
+        nudTotalT.Value = 0
+        nudTotalD.Value = 0
 
         nudBoost.Enabled = True
         lstBoost.Items.Clear()
